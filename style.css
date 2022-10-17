@@ -1,0 +1,79 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.html{
+    font-size: 100%;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__title{
+    color: hsl(250,69%,61%);
+    text-align: center;
+}
+.form .form__container{    
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.26);
+}
+
+.form .form__element{
+    background-color: hsl(230,70%,96%);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form .form__element input{
+    background-color: hsl(230,70%,96%);
+    border: none;
+    outline: none;
+}
+.form .form__button{
+   width: 100%;
+}
+.form .form__button button{
+    background-color:  hsl(250,69%,61%);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    
+}
+.form .form__button button.success{
+    background-color: rgba(0, 128, 0, 0.788);
+}
+.form .form__button button.error{
+    background-color: rgba(255, 0, 0, 0.774);
+}
+.form .form__button button.translate--left{
+    transform: translateX(0);
+}
+.form .form__button button.translate--right{
+    transform: translateX(15rem);
+}
+@media (max-width:800px) {
+    .form .form__container{
+        width: 70%;
+    }
+
+}
+@media (max-width:400px) {
+    .form .form__container{
+        width: 80%;
+    }
+    .form .form__button button.translate--left{
+        transform: translateX(0);
+    }
+    
+}
